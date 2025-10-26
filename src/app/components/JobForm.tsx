@@ -2,9 +2,7 @@
 
 import { useState } from "react";
 
-type Errors = Partial<
-  Record<"firstName" | "lastName" | "email" | "job", string>
->;
+type Errors = Partial<Record<"fName" | "lastName" | "email" | "job", string>>;
 
 export default function JobForm() {
   const [status, setStatus] = useState<
@@ -52,18 +50,18 @@ export default function JobForm() {
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <div>
-          <label className={label} htmlFor="firstName">
+          <label className={label} htmlFor="fName">
             First Name
           </label>
           <input
-            id="firstName"
-            name="firstName"
+            id="fName"
+            name="fName"
             type="text"
             className={input}
             placeholder="Ada"
           />
-          {errors.firstName && (
-            <p className="mt-1 text-sm text-red-600">{errors.firstName}</p>
+          {errors.fName && (
+            <p className="mt-1 text-sm text-red-600">{errors.fName}</p>
           )}
         </div>
         <div>
