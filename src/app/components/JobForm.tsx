@@ -47,7 +47,7 @@ export default function JobForm() {
   const label = "mb-1 block text-sm font-medium text-gray-800";
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-4" autoComplete="off">
       <h3 className="text-xl font-semibold">Tell us about you</h3>
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
